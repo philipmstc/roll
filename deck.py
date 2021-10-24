@@ -1,10 +1,10 @@
 #deck.py
 
-from dice import Development, Settlement, Dice, Card
+from dice import Development, Settlement, Dice, Card, Colors
 
 DECK = [
-	Card(
-		Settlement("Big Blue", 1, "novelty", lambda : Dice.novelty().roll()),
-		Development("Useless", 1, "neutral", lambda : None, lambda : Dice.military().roll())
-	)
+    Card(
+        Settlement("Big Blue", 2, Colors["novelty"], lambda : Dice.novelty().roll()),
+        Development("Useless", 2, Colors["development"], lambda : None, lambda : Dice.military().roll())
+    )
 ]
