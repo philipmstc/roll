@@ -1,6 +1,7 @@
 #game.py
 from deck import *
 from dice import *
+from phases import *
 import random
 
 class Player:
@@ -32,6 +33,7 @@ class Player:
         self.developments.append(development)
 
     def complete(self, card):
+        self.vp += card.cost 
         self.completed.append(card)
 
     def display_tableau(self):
@@ -41,11 +43,11 @@ class Player:
         return _str
 
 PHASES = {
-    "EXPLORE": [],
-    "SETTLE": [],
-    "DEVELOP": [],
-    "PRODUCE": [],
-    "SHIP": []
+    "EXPLORE": Phase("explore", explore_start, explore_phase, explore_end)
+    "SETTLE": Phase("settle", settle_start, settle_phase, settle_end)
+    "DEVELOP": Phase("develop", develop_start, develop_phase, develop_end)
+    "PRODUCE": Phase("produce", produce_start, produce_phase, produce_end)
+    "SHIP": Phase("ship", ship_start, ship_phase, ship_end)
 }
 
 class Game:
@@ -53,24 +55,7 @@ class Game:
         self.player = Player()
         self.deck = deck.DECK
 
-    def explore(self, die):
-        choice = input("Should " + str(die) + " scout [X] or stock [$]")
-        if choice == "X":
-            self.scout(die)
-        else: 
-            self.stock(die)
-
-    def scout(self, die):
-        card = self.deck[random.randint(0, len(self.deck)-1)]
-        print(card)
-        choice = input("[s]ettlment or [d]evelopment?")
-        if choice == "s":
-            self.player.discover(card.settlement())
-        else:
-            self.player.research(card.development())
-
-    def stock(self, die):
-        self.player.wallet += 2
+    
 
     def settle(self, die):
         if not self.player.settlements.isEmpty():
@@ -92,14 +77,18 @@ class Game:
 
     def play(self):
         while(True):
-            self.player.display_pre_turn()
-            self.explore(Dice.civilian())
-            self.settle(Dice.alien())
-            self.develop(Dice.military())
+            self.player.turn_start()
+            for phase in activePhases:
+                phase.start(player)
+                phase.play(player)
+                phase.end(player)
+            self.player.turn_end()
+            self
             input("Press any key to continue")
 
 
 
 if __name__ == "__main__":
+    deck.init()
     game = Game()
     game.play()

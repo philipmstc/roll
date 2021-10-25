@@ -84,11 +84,21 @@ class Card:
         return self.face2
 
 class CardFace:
+    """
+    * name|type|cost|color|reassign|reass. dice|I|II|III|IV|V|game end|die loss|die gain|placement|credits
+    *
+    *
+    *
+    *
+    """
+
     def __init__(self, title, cost, color, onComplete):
         self.title = title
         self.cost = cost
         self.color = color
         self.onComplete = onComplete
+
+    
 
     def __str__(self):
         output = "{1}] {0}"
@@ -142,6 +152,7 @@ class Queue():
         _str = "⌊"
         for worker in self.workers:
             _str += str(worker)
+        _str += (self.top().cost-len(self.workers))*"□"
         return _str + "⌋ " + str(self.top())
 
 if __name__ == '__main__':
