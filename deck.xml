@@ -1,0 +1,447 @@
+<card type="development" name="Technology Unions" cost="1">
+	<phaseEffect phase="DEVELOP">
+		<gain type="credit" amount="1" modifier="1" condition="complete_development"/>
+		<description text="+$1 for most devs in your tableau (ties go to no one)"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Recycling" cost="2">
+	<phaseEffect phase="DEVELOP">
+		<gain type="credit" amount="1" modifier="1" condition="complete_development"/>
+		<description text="'+$1 after completing each development, not including this one"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Public Works" cost="1">
+	<phaseEffect phase="DEVELOP">
+		<gain type="credit" amount="1" modifier="1" condition="complete_development"/>
+		<description text="+$1 after completeing each development (other than this one)"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Investors" cost="5">
+	<phaseEffect phase="DEVELOP">
+		<gain type="credit" amount="2" modifier="1" condition="development_end"/>
+		<description text="+$2 at the end of this phase, including the phase in which you complete this"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Investment Credits" cost="4">
+	<phaseEffect phase="DEVELOP">
+		<discount amount="1" type="any"/>
+		<description text="All developments (after this one) require one fewer developer to complete (but not fewer than one)"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Federation" cost="6+">
+	<phaseEffect phase="game_end" text="Add 1/3 of your total base development cost (rounded up)"/>
+	<phaseEffect phase="DEVELOP">
+		<refund amount="2" type="any"/>
+		<description text="When completing each development (after this one), put 1 or 2 of the developers  used into your cup instead of your Citizenry"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Alien Research Ship" cost="5">
+	<phaseEffect phase="EXPLORE">
+		<additionalDie type="home, alien"/>
+		<additionalDie type="home, alien"/>
+		<description text="Act as if you have an extra Home explorer and Alien Technology explorer for this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Major Research Labs" cost="3">
+	<phaseEffect phase="EXPLORE">
+		<additionalDie type="home"/>
+		<description text="Act as if you have an extra Home explorer for use this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Alien Research Team" cost="3">
+	<phaseEffect phase="EXPLORE">
+		<description text="Draw and keep an extra tile at the end of this phase, If you acouted with at least 1 Alien Technology explorer +$1"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Advanced Logistics" cost="1">
+	<phaseEffect phase="EXPLORE">
+		<description text="You may rearrange all tiles in your construction zone (including turning them over)"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Mining League" cost="6+">
+	<phaseEffect phase="game_end" text="+2 VP per Rare Elements world in your tableau"/>
+	<phaseEffect phase="PRODUCE">
+		<gain type="credit" amount="1" modifier="goods_on_RE" condition="produce_end"/>
+		<description text="+$1 for each good on a Rare Elements world at the end of this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Space Tourism" cost="3">
+	<phaseEffect phase="PRODUCE">
+		<gain type="credit" amount="1" modifier="1" condition="produce_end"/>
+		<description text="+$1, if you have the highest-cost world across all tableaus +$1 extra"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Merchant Guild" cost="3">
+	<phaseEffect phase="PRODUCE">
+		<gain type="credit" amount="2" modifier="1" condition="produce_end"/>
+		<description text="+$2 at the end of this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Reserves" cost="6+">
+	<phaseEffect phase="game_end" text="+1 VP per good (at then end of the game)"/>
+	<phaseEffect phase="PRODUCE">
+		<description text="Each of your worlds can hold an extra good (each good still requires 1 shipper)"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Salon" cost="4">
+	<phaseEffect phase="PRODUCE">
+		<gain type="vp" amount="1" modifier="1" condition="produce_end"/>
+		<description text="Gain 1 VP"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Robot Surveyors" cost="5">
+	<phaseEffect phase="SETTLE">
+		<gain type="credit" amount="2" modifier="1" condition="settle_end"/>
+		<description text="+$2 at the end of this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Terraforming Robots" cost="1">
+	<phaseEffect phase="SETTLE">
+		<gain type="credit" amount="1" modifier="1" condition="complete_world"/>
+		<description text="$1 after completing any world, If completing a Rare Elements world +$1 extra"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Replicant Robots" cost="4">
+	<phaseEffect phase="SETTLE">
+		<discount amount="1" type="any"/>
+		<description text="All worlds require 1 fewer settlers to complete (but not fewer than 1)"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Alien Uplift Blueprints" cost="3">
+	<phaseEffect phase="SETTLE">
+		<discount amount="1" type="genes"/>
+		<discount amount="1" type=" alien"/>
+		<description text="Genes and Alien Technology worlds reuqire 1 fewer settlers to complete"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Free Trade Zone" cost="3">
+	<phaseEffect phase="SETTLE">
+		<discount amount="2" type="grey"/>
+		<description text="grey worlds require 2 fewer settlers to complete (but no fewer than 2)"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Exchange" cost="6+">
+	<phaseEffect phase="game_end" text="+1 VP for each different color of dice you own"/>
+	<phaseEffect phase="SETTLE">
+		<refund amount="2" type="any"/>
+		<description text="when completing each world, put 1 or 2 settlers used into your cup instead of your Citizenry"/>
+	</phaseEffect>
+</card>
+<card type="development" name="New Galactic Order" cost="6+">
+	<phaseEffect phase="game_end" text="+2 VP per 3 Military dice you own (rounded up)"/>
+	<phaseEffect phase="SETTLE">
+		<refund amount="ALL" type="military"/>
+		<description text="When completing each world, put all of the Military settlers used into your cupt instead of your Citizenry"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Export Duties" cost="2">
+	<phaseEffect phase="SHIP">
+		<gain type="credit" amount="1" modifier="1" condition="trade_good"/>
+		<description text="+$1 for each good you Trade this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Jumpdrive Research" cost="1">
+	<phaseEffect phase="SHIP">
+		<gain type="credit" amount="1" modifier="RE_goods_traded" condition="trade_good"/>
+		<description text="+$1 for each good you Trade this turn from a Rare Elements world"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Space Refineries" cost="3">
+	<phaseEffect phase="SHIP">
+		<gain type="vp" amount="1" modifier="RE_goods_consumed" condition="consume_good"/>
+		<description text="+$1 VP for each good you Consume from a Rare Elements world this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Free Trade Association" cost="6+">
+	<phaseEffect phase="game_end" text="Add half of your total Novelty world cost (rounded up)"/>
+	<phaseEffect phase="SHIP">
+		<gain type="credit" amount="2" modifier="1" condition="ship_end"/>
+		<description text="+$2 at the end of this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Demand" cost="2">
+	<phaseEffect phase="SHIP">
+		<gain type="credit" amount="2" modifier="NV_goods_traded" condition="trade_good"/>
+		<description text="+$2 for each good you Trade this turn from a Novelty world"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Minor Research Labs" cost="2">
+	<phaseEffect phase="SHIP">
+		<gain type="vp" amount="1" modifier="AL_goods_consumed OR GN_goods_consumed" condition="consume_good"/>
+		<description text="+1 VP for each good you Consume from a Genes or Alien Technology world this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Renaissance" cost="6+">
+	<phaseEffect phase="game_end" text="+1, 2, 3, 4, ... VP for 1, 3, 6, 10, ... VP in chips"/>
+	<phaseEffect phase="SHIP">
+		<gain type="vp" amount="1" modifier="1" condition="consume_good"/>
+		<description text="+1 VP for each good you Consume this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="New Economy" cost="6+">
+	<phaseEffect phase="game_end" text="+1 VP per development without a Reassign power (including this one)"/>
+	<phaseEffect phase="SHIP">
+		<gain type="credit" amount="2" modifier="1" condition="consume_good"/>
+		<description text="+2$ for each good you Consume this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Organic Shipyards" cost="5">
+	<phaseEffect phase="SHIP">
+		<additionalDie type="home, genes"/>
+		<additionalDie type="home, genes"/>
+		<description text="Act as if you have an extra home shipper and an extra Genes shipper for use this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Space Docks" cost="2">
+	<phaseEffect phase="SHIP">
+		<additionalDie type="home"/>
+		<description text="Act as if you have one more home shipper for use this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Galactic Bankers" cost="6+">
+	<phaseEffect phase="game_end" text="+1 VP per development in your tableau"/>
+	<phaseEffect phase="SHIP">
+		<description text="Each time you Trade a good this phase, you may spend $1 to gain 1 VP chip"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Trade Levies" cost="3">
+	<phaseEffect phase="SHIP">
+		<gain type="credit" amount="1" modifier="1" condition="consume_good"/>
+		<description text="+$1 for each good you Consume this phase"/>
+	</phaseEffect>
+</card>
+<card type="development" name="Shipping Affinity" cost="2">
+	<reassign toPhase="ship" from="1"/>
+</card>
+<card type="development" name="Galactic Influence" cost="3">
+	<reassign toPhase="any" from="1"/>
+</card>
+<card type="development" name="Operations Affinity" cost="2">
+	<reassign toPhase="I, IV" from="1"/>
+</card>
+<card type="development" name="Technology Affinity" cost="2">
+	<reassign toPhase="develop" from="1"/>
+</card>
+<card type="development" name="Colonial Affinity" cost="2">
+	<reassign toPhase="settle" from="1"/>
+</card>
+<card type="development" name="Galactic Mandate" cost="3">
+	<reassign toPhase="dictate reassign up to 3" from="1"/>
+</card>
+<card type="development" name="Diversification" cost="1">
+	<reassign toPhase="any" from="1 home"/>
+</card>
+<card type="development" name="Local Subsidies" cost="2">
+	<reassign toPhase="any" from="1 home"/>
+</card>
+<card type="development" name="Space Mercenaries" cost="1">
+	<reassign toPhase="any" from="1 Military or 1 Rare Elements"/>
+</card>
+<card type="development" name="Hydroponics Guild" cost="1">
+	<reassign toPhase="any" from="1 Novelty or Genes worker"/>
+</card>
+<card type="development" name="Propaganda Campaign" cost="4">
+	<reassign toPhase="selected_phase" from="1 or 2"/>
+</card>
+<card type="development" name="Nanotechnology" cost="5">
+	<reassign toPhase="any" from="1 or 2"/>
+</card>
+<card type="development" name="Isolation Policy" cost="3">
+	<reassign toPhase="any" from="1 or 2 Explorers"/>
+</card>
+<card type="development" name="Homeworld Patriotism" cost="3">
+	<reassign toPhase="selected_phase" from="1 or 2 home"/>
+</card>
+<card type="development" name="System Diversification" cost="6+">
+	<phaseEffect phase="game_end" text="Add half of your total base Reassign-power development cost (rounded up)"/>
+	<reassign toPhase="any" from="1 or 2 non-Home"/>
+</card>
+<card type="development" name="Backup Planning" cost="1">
+	<reassign toPhase="dictate x1 per die used" from="1+"/>
+</card>
+<card type="development" name="Mad Scientists" cost="3">
+	<reassign toPhase="any" from="2 if most Novelty worlds, 1 if tied"/>
+</card>
+<card type="development" name="Executive Power" cost="3">
+	<reassign toPhase="selected_phase" from="2 same phase"/>
+</card>
+<card type="development" name="Conscription" cost="4">
+	<diceGain type="military" placement="cup"/>
+	<diceGain type="military" placement="cup"/>
+	<diceLoss/>
+</card>
+<card type="world" name="Gem World" cost="2">
+	<diceGain type="novelty" placement="cup"/>
+</card>
+<card type="world" name="Deep Space Symbionts, Ltd" cost="4">
+	<diceGain type="genes" placement="cup"/>
+</card>
+<card type="world" name="Deserted Alien Colony" cost="5">
+	<diceGain type="alien" placement="world"/>
+</card>
+<card type="world" name="Sentient Robots" cost="2">
+	<diceGain type="military" placement="cup"/>
+</card>
+<card type="world" name="Rebel Warrior Race" cost="3">
+	<diceGain type="military" placement="citizenry"/>
+	<diceGain type="genes" placement="citizenry"/>
+	<diceLoss/>
+</card>
+<card type="world" name="New Survivalists" cost="1">
+	<diceGain type="novelty" placement="citizenry"/>
+</card>
+<card type="world" name="Spice World" cost="2">
+	<diceGain type="novelty" placement="cup"/>
+</card>
+<card type="world" name="Lost Species Ark World" cost="5">
+	<diceGain type="genes" placement="world"/>
+</card>
+<card type="world" name="Secluded World" cost="1">
+	<diceGain type="novelty" placement="citizenry"/>
+</card>
+<card type="world" name="Galactic Resort" cost="3">
+	<diceGain type="novelty" placement="world"/>
+</card>
+<card type="world" name="Designer Species, ULTD." cost="5">
+	<diceGain type="genes" placement="world"/>
+</card>
+<card type="world" name="New Vinland" cost="2">
+	<diceGain type="novelty" placement="cup"/>
+</card>
+<card type="world" name="Galactic Survey Headquarters" cost="2">
+	<diceGain type="novelty" placement="cup"/>
+</card>
+<card type="world" name="Comet Zone" cost="3">
+	<diceGain type="elements" placement="world"/>
+</card>
+<card type="world" name="Blaster Gem mines" cost="3">
+	<diceGain type="military" placement="citizenry"/>
+	<diceGain type="elements" placement="citizenry"/>
+</card>
+<card type="world" name="Trading World" cost="3">
+	<diceGain type="consumption" placement="citizenry"/>
+</card>
+<card type="world" name="High Gravity World" cost="1">
+	<diceGain type="military" placement="cup"/>
+</card>
+<card type="world" name="Galactic Trendsetters" cost="6">
+	<diceGain type="consumption" placement="citizenry"/>
+	<diceGain type="consumption" placement="citizenry"/>
+</card>
+<card type="development" name="Space Marines" cost="3">
+	<diceGain type="military" placement="cup"/>
+	<diceLoss/>
+</card>
+<card type="world" name="Prosperous World" cost="3">
+	<diceGain type="novelty" placement="world"/>
+</card>
+<card type="world" name="Transport Hub" cost="4">
+	<diceGain type="consumption" placement="citizenry"/>
+</card>
+<card type="world" name="Tourist World" cost="4">
+	<diceGain type="consumption" placement="citizenry"/>
+</card>
+<card type="world" name="Lost Alien Warship" cost="5">
+	<diceGain type="alien" placement="cup"/>
+</card>
+<card type="world" name="Deserted Alien Library" cost="6">
+	<diceGain type="alien" placement="world"/>
+</card>
+<card type="world" name="Universal Exports" cost="3">
+	<diceGain type="novelty" placement="world"/>
+</card>
+<card type="world" name="Runaway Robots" cost="2">
+	<diceGain type="military" placement="cup"/>
+</card>
+<card type="world" name="Alien Robot Scout Ship" cost="4">
+	<diceGain type="alien" placement="cup"/>
+</card>
+<card type="world" name="Information Hub" cost="3">
+	<diceGain type="novelty" placement="world"/>
+</card>
+<card type="world" name="Lost Alien Battle Fleet" cost="6">
+	<diceGain type="alien" placement="cup"/>
+</card>
+<card type="world" name="Fifth Column" cost="1">
+	<diceGain type="military" placement="cup"/>
+</card>
+<card type="world" name="Space Port" cost="2">
+	<diceGain type="novelty" placement="cup"/>
+</card>
+<card type="world" name="Star Nomad Lair" cost="1">
+	<diceGain type="novelty" placement="citizenry"/>
+</card>
+<card type="world" name="Rebel Hideout" cost="2">
+	<diceGain type="military" placement="citizenry"/>
+	<diceGain type="military" placement="citizenry"/>
+</card>
+<card type="world" name="Armaments World" cost="4">
+	<diceGain type="elements" placement="world"/>
+</card>
+<card type="world" name="Rebel Miners" cost="2">
+	<diceGain type="military" placement="citizenry"/>
+	<diceGain type="military" placement="citizenry"/>
+	<diceLoss/>
+</card>
+<card type="world" name="Jungle World" cost="4">
+	<diceGain type="genes" placement="world"/>
+</card>
+<card type="world" name="Jumpdrive Fuel Refinery" cost="3">
+	<diceGain type="elements" placement="world"/>
+</card>
+<card type="world" name="Planetary Nebula" cost="3">
+	<diceGain type="elements" placement="world"/>
+</card>
+<card type="world" name="Artist Colony" cost="1">
+	<diceGain type="novelty" placement="citizenry"/>
+</card>
+<card type="world" name="Ore-Rich World" cost="2">
+	<diceGain type="elements" placement="cup"/>
+</card>
+<card type="world" name="Galactic Fuel Depot" cost="3">
+	<diceGain type="elements" placement="world"/>
+</card>
+<card type="world" name="Gateway Station" cost="3">
+	<diceGain type="consumption" placement="citizenry"/>
+</card>
+<card type="world" name="Distant World" cost="4">
+	<diceGain type="genes" placement="cup"/>
+</card>
+<card type="world" name="Terraforming World" cost="5">
+	<diceGain type="consumption" placement="citizenry"/>
+</card>
+<card type="world" name="Former Penal Colony" cost="1">
+	<diceGain type="military" placement="cup"/>
+	<diceLoss/>
+</card>
+<card type="world" name="Asteroid Belt" cost="2">
+	<diceGain type="elements" placement="cup"/>
+</card>
+<card type="development" name="Information Tech" cost="4">
+	<diceGain type="novelty" placement="cup"/>
+	<diceGain type="novelty" placement="cup"/>
+	<diceLoss/>
+</card>
+<card type="world" name="Pirate World" cost="2">
+	<diceGain type="military" placement="citizenry"/>
+</card>
+<card type="world" name="Radioactive World" cost="2">
+	<diceGain type="elements" placement="cup"/>
+</card>
+<card type="world" name="Deserted Alien Outpost" cost="4">
+	<diceGain type="alien" placement="world"/>
+</card>
+<card type="world" name="Malevolent Lifeforms" cost="4">
+</card>
+<card type="world" name="Silicon World" cost="4">
+</card>
+<card type="world" name="Outlaw World" cost="2">
+</card>
+<card type="world" name="Alien Sentinels" cost="6">
+</card>
+<card type="world" name="Uplift Overseers" cost="3">
+</card>
+<card type="world" name="Mining World" cost="3">
+</card>
+<card type="world" name="Plague World" cost="3">
+</card>
