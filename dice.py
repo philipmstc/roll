@@ -92,17 +92,28 @@ class CardFace:
     *
     """
 
-    def __init__(self, title, cost, color, onComplete):
+    def __init__(self, title, cost, color, onComplete, phaseEffects, gameEnd):
         self.title = title
         self.cost = cost
         self.color = color
         self.onComplete = onComplete
 
-    
-
     def __str__(self):
         output = "{1}] {0}"
         return output.format(self.title, self.cost)
+
+class PhaseEffect():
+    def __init__(self, name, effect, condition):
+        self.name = name
+        self.effect = effect
+        self.condition = condition
+
+    def activate(self, game, player, phase):
+        if phase == self.name:
+            if condition(player, game):
+                effect(player, game)
+
+
 
 class Development(CardFace):
     def __init__(self, title, cost, color, effect, onComplete):
